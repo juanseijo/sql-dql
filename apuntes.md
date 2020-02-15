@@ -47,3 +47,9 @@ Dentro del WHERE podemos usar los comparadores para comprobar los datos. Estos c
 | >=      | Mayor o igual que|
 | <=      | Menor o igual que|
 | <>      | No es igual a    |
+
+```sql
+SELECT name 
+FROM world
+WHERE population > 200000000;
+```

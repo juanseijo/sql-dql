@@ -1,4 +1,12 @@
 # SELE
-### SE
-![gato](C:\Users\juans\Desktop\dude\desk 2\gatete_by_maesesag-d5hovyr.jpg)
-[google](www.google.com)
+
+
+Sublenguajes SQL
+=
+
+- DDL (Data Definition Language)
+- DML (Data Manipulation Language)
+- DCL (Data Control Language)
+- TCL (Transition Control Language)
+- DQL (Data Query Language)
+- SCL (Session Control Language)

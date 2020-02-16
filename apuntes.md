@@ -31,7 +31,7 @@ FROM world;
 ```
 Con una consulta como esta, obtendríamos la columna 'population' de la tabla 'world'
 
-## WHERE y sus atributos
+### WHERE y sus atributos
 Para filtrar los resultados por tuplas usaremos el comando WHERE
 ```sql
 SELECT population 
@@ -55,10 +55,38 @@ SELECT name
 FROM world
 WHERE population > 200000000;
 ```
-Además de los comparadores podemos usar clausulas como el BETWEEN para devolver valores dentro de un rango
+
+Además de los comparadores podemos usar clausulas como el BETWEEN para devolver valores dentro de un rango, para ello jugaremos con el operador AND:
 ```sql
 SELECT name 
 FROM world
 WHERE population BETWEEN 200000000 AND 300000000;
 ```
+
+Si queremos filtrar las tuplas de una columna con valores distintos entre si (ya sean cadenas de caracteres o números salteados) podemos utilizar el operador IN, para comparar valores a partir de una lista sin necesidad de usar varias veces el comparador '='
+
+```sql
+/* 
+SELECT population 
+FROM world
+WHERE name = 'France'
+   OR name = 'Germany'
+   OR name = 'Italy';
+*/
+SELECT name, population 
+FROM world
+WHERE name IN ('France','Germany','Italy');
+```
+Como podemos ver en este ejemplo, podemos consultar mas de una columna separando los nombres de las columnas con comas en el SELECT, además podemos hacer comentarios que no influirán en nuestro código, para ello los señalizamos con /* y */ tal y como en el ejemplo.
+
+
+
+
+
+
+
+
+
+
+
 

@@ -11,6 +11,7 @@ Existen 6 tipos de sublenguajes SQL:
 
 ---
 # DQL y el SELECT
+Las consultas con el SELECT siguen la siguiente syntax:
 ```sql
 SELECT column_list 
 FROM table-name
@@ -30,7 +31,7 @@ FROM world;
 ```
 Con una consulta como esta, obtendríamos la columna 'population' de la tabla 'world'
 
-### WHERE y sus atributos
+## WHERE y sus atributos
 Para filtrar los resultados por tuplas usaremos el comando WHERE
 ```sql
 SELECT population 
@@ -54,6 +55,10 @@ SELECT name
 FROM world
 WHERE population > 200000000;
 ```
-Además de los comparadores podemos usar clausulas como el BETWEEN
-
+Además de los comparadores podemos usar clausulas como el BETWEEN para devolver valores dentro de un rango
+```sql
+SELECT name 
+FROM world
+WHERE population BETWEEN 200000000 AND 300000000;
+```
 

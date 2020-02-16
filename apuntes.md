@@ -2,17 +2,17 @@
 
 
 ## Índice
-[SQL y Sublenguajes](#sql-y-sublenguajes-sql)
-[DQL](#dql)
-[El SELECT](#comando-select)
-[WHERE y sus atributos](#where-y-sus-atributos)
-[ORDER BY](#order-by)
-[COUNT, SUM y AVG](#count-sum-y-avg)
-[GROUP BY](#group-by)
-[HAVING](#having)
-[Subconsultas](#subconsultas)
-[JOIN](#join)
-[LEFT JOIN y RIGHT JOIN](#otros-tipos-de-join)
+- [SQL y Sublenguajes](#sql-y-sublenguajes-sql)
+- [DQL](#dql)
+- [El SELECT](#comando-select)
+- [WHERE y sus atributos](#where-y-sus-atributos)
+- [ORDER BY](#order-by)
+- [COUNT, SUM y AVG](#count-sum-y-avg)
+- [GROUP BY](#group-by)
+- [HAVING](#having)
+- [Subconsultas](#subconsultas)
+- [JOIN](#join)
+- [LEFT JOIN y RIGHT JOIN](#otros-tipos-de-join)
 
 
 

@@ -56,6 +56,15 @@ SELECT name
 FROM world
 WHERE population > 200000000;
 ```
+También existe LIKE que compara valores con el uso de comodines. Los comodines se utilizan para sustituir caracteres sin definirlos, existen los siguientes
+- __%__ que sustituye de 0 a más caracteres
+- **\_** que sustituye a un carácter único
+```sql
+SELECT name 
+FROM world
+WHERE name LIKE '%United%';
+```
+Este código filtraría todas las tuplas que contengan la palabra 'United'
 
 Además de los comparadores podemos usar clausulas como el BETWEEN para devolver valores dentro de un rango, para ello jugaremos con el operador AND:
 ```sql
@@ -78,7 +87,7 @@ SELECT name, population
 FROM world
 WHERE name IN ('France','Germany','Italy');
 ```
-Como podemos ver en este ejemplo, podemos consultar mas de una columna separando los nombres de las columnas con comas en el SELECT, además podemos hacer __comentarios__ que no influirán en nuestro código, para ello los señalizamos con /* y */ tal y como en el ejemplo.
+Como podemos ver en este ejemplo, podemos consultar mas de una columna separando los nombres de las columnas con __comas__ en el SELECT, además podemos hacer __comentarios__ que no influirán en nuestro código, para ello los señalizamos con /* y */ tal y como en el ejemplo.
 
 
 

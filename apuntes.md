@@ -1,5 +1,5 @@
 # 📖 SQL y Sublenguajes SQL 📖
-SQL (Structured Query Language) es un lenguaje declarativo utilizado en programación, diseñado para administrar, y recuperar información de sistemas de gestión de bases de datos relacionales.
+__SQL__ (Structured Query Language) es un lenguaje declarativo utilizado en programación, diseñado para administrar, y recuperar información de sistemas de gestión de bases de datos relacionales.
 
 Existen 6 tipos de sublenguajes SQL:
 - DDL (Data Definition Language) → CREATE, ALTER, DROP
@@ -22,7 +22,7 @@ FROM table-name
 ```
 El código de la consulta debe acabar con un punto y coma ( ; )
 Podemos usar operadores para unir clausulas (AND, OR)
-
+ 
 # Contenido básico 
 El comando SELECT lo utilizamos para filtrar las columnas que queremos sacar en la consulta y el FROM para elegir la tabla de donde queremos sacar los datos.
 ```sql
@@ -30,8 +30,9 @@ SELECT population
 FROM world;
 ```
 Con una consulta como esta, obtendríamos la columna 'population' de la tabla 'world'
-
-### WHERE y sus atributos
+ 
+ 
+## WHERE y sus atributos
 Para filtrar los resultados por tuplas usaremos el comando WHERE
 ```sql
 SELECT population 
@@ -62,7 +63,7 @@ SELECT name
 FROM world
 WHERE population BETWEEN 200000000 AND 300000000;
 ```
-
+ 
 Si queremos filtrar las tuplas de una columna con valores distintos entre si (ya sean cadenas de caracteres o números salteados) podemos utilizar el operador IN, para comparar valores a partir de una lista sin necesidad de usar varias veces el comparador '='
 
 ```sql
@@ -77,7 +78,7 @@ SELECT name, population
 FROM world
 WHERE name IN ('France','Germany','Italy');
 ```
-Como podemos ver en este ejemplo, podemos consultar mas de una columna separando los nombres de las columnas con comas en el SELECT, además podemos hacer comentarios que no influirán en nuestro código, para ello los señalizamos con /* y */ tal y como en el ejemplo.
+Como podemos ver en este ejemplo, podemos consultar mas de una columna separando los nombres de las columnas con comas en el SELECT, además podemos hacer __comentarios__ que no influirán en nuestro código, para ello los señalizamos con /* y */ tal y como en el ejemplo.
 
 
 

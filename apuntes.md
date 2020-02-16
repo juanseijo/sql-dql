@@ -24,7 +24,7 @@ El código de la consulta debe acabar con un punto y coma ( ; )
 Podemos usar operadores para unir clausulas (AND, OR)
   
 
-# Contenido básico 
+# Comando SELECT 
 El comando SELECT lo utilizamos para filtrar las columnas que queremos sacar en la consulta y el FROM para elegir la tabla de donde queremos sacar los datos.
 ```sql
 SELECT population 
@@ -122,13 +122,13 @@ Para ordenar los resultados de nuestra consulta podemos ordenarlos según la col
 SELECT column_name
 FROM table_name
 WHERE condition
-ORDER BY column_name
+ORDER BY column_name;
 ```
 Por defecto el orden será ascendente pero puede especificarse usando **ASC** o **DESC**
 ```sql
 SELECT company_name, city
 FROM dept
-ORDER BY company_name DESC
+ORDER BY company_name DESC;
 ```
 ---
 
@@ -141,9 +141,62 @@ COUNT, SUM y AVG son funciones que agregan valores según los datos que reciben
 La syntax sería así:
 ```sql
 SELECT [COUNT|SUM|AVG](column_name)
-FROM table_name
+FROM table_name;
 ```
+En caso de que tengamos más columnas en el SELECT además de las que tenemos en las funciones de agregado, debemos agrupar las demás con el comando **GROUP BY** 
+También podemos usarlos para filtrar resultados añadiéndolos a la cláusula **HAVING**
 
+---
+### GROUP BY
+Cuando queremos señalar sobre que tuplas vamos a hacer las funciones de agregado lo hacemos con un GROUP BY
+La syntax sería así
+```sql
+SELECT column_name
+FROM table_name
+WHERE condition
+GROUP BY column_name
+ORDER BY column_name;
+```
+Con un ejemplo sería así:
+```sql
+SELECT COUNT(id), country 
+FROM customer
+GROUP BY country;
+```
+---
+### HAVING
+La cláusula HAVING filtra resultados en agrupaciones, a diferencia del WHERE que lo hace en las tuplas de forma individual. Igualmente un WHERE y un HAVING pueden ir en la misma consulta. 
+La syntax sería así:
+```sql
+SELECT column_name
+FROM table_name
+WHERE condition
+GROUP BY column_name
+HAVING condition
+ORDER BY column_name;
+```
+Aplicándolo en el ejemplo del GROUP BY podríamos aplicarlo así
+```sql
+SELECT COUNT(id), country 
+FROM customer
+GROUP BY country
+HAVING COUNT(id) > 10
+ORDER BY COUNT(id) DESC;
+```
+---
+
+## Subconsultas
+
+Habrá situaciones en las que se necesitarán datos de otras tablas a las que no podremos acceder directamente con nuestra consulta, para ello realizaremos subconsultas que trabajarán independientemente de la consulta a la que irán anidada (lo que pasa en Las Vegas, se queda en Las Vegas 🎰) .
+Podremos colocar las subconsultas en el SELECT y en el WHERE pero en principio las usaremos en el WHERE. Irán siempre entre paréntesis.
+
+Un ejemplo de un caso práctico sería el siguiente:
+```sql
+SELECT name FROM world
+WHERE population > (SELECT population FROM world
+                    WHERE name='Romania'
+                    );
+```
 
 
 

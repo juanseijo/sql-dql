@@ -1,4 +1,4 @@
-# SQL y Sublenguajes SQL
+# 📖 SQL y Sublenguajes SQL 📖
 SQL (Structured Query Language) es un lenguaje declarativo utilizado en programación, diseñado para administrar, y recuperar información de sistemas de gestión de bases de datos relacionales.
 
 Existen 6 tipos de sublenguajes SQL:

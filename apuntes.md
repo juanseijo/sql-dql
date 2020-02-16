@@ -93,9 +93,25 @@ WHERE name IN ('France','Germany','Italy');
 ```
 Como podemos ver en este ejemplo, podemos consultar mas de una columna separando los nombres de las columnas con __comas__ en el SELECT, además podemos hacer __comentarios__ que no influirán en nuestro código, para ello los señalizamos con /* y */ tal y como en el ejemplo.
 
+También hemos usado OR así que explicaremos su funcionamiento junto con el de AND y NOT
+- AND requiere que dos o más condiciones sean correctas
+- OR requiere que una de las condiciones sea correcta
+- NOT niega la condición dada
 
+```sql
+SELECT name, population, area
+FROM world
+WHERE   (population>250000000 or area>3000000)
+AND NOT (population>250000000 and area>3000000);
+```
 
-
+Existen funciones como **LENGTH** que sirven para registrar el número de caracteres de una cadena para operar con ello, o **LEFT** que sirve para coger los primeros caracteres de una cadena con el formato
+```sql
+LEFT(name, 1)
+```
+```sql
+LENGTH(name)
+```
 
 
 

@@ -49,6 +49,7 @@ FROM table-name
 El código de la consulta debe acabar con un punto y coma ( ; )
 Podemos usar operadores para unir clausulas (AND, OR)
   
+---
 
 # Comando SELECT 
 El comando SELECT lo utilizamos para filtrar las columnas que queremos sacar en la consulta y el FROM para elegir la tabla de donde queremos sacar los datos.
@@ -59,6 +60,7 @@ FROM world;
 Con una consulta como esta, obtendríamos la columna 'population' de la tabla 'world'
  
   
+---
 
 ## WHERE y sus atributos
 Para filtrar los resultados por tuplas usaremos el comando WHERE

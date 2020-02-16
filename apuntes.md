@@ -197,6 +197,38 @@ WHERE population > (SELECT population FROM world
                     WHERE name='Romania'
                     );
 ```
+Podemos hacer más de una subconsulta:
+```sql
+SELECT name,population FROM world
+WHERE population BETWEEN
+(SELECT population+1 FROM world WHERE name='Canada')
+AND
+(SELECT population-1 FROM world WHERE name='Poland');
+```
+---
+
+## JOIN
+Cuando necesitamos acceder a otra tabla y no queremos realizar una subconsulta existe la función JOIN, que nos sirve para enlazar tablas a la hora de seleccionar dónde vamos a hacer la consulta (es decir en el FROM).
+
+Para utilizar el JOIN simplemente lo utilizaremos para unir todas las tablas que vamos a necesitar en la consulta, y para combinarlas utilizaremos 2 columnas con tuplas similares, especificadas con un ON. Con la siguiente syntax
+```sql
+SELECT column_names(de las tablas que sean)
+FROM table1 JOIN table2 ON column_table1 = column_table2;
+```
+Con esto, las tuplas de la **column_table1** que coincidan con las tuplas de la **column_table2** unirán las 2 tablas. 
+
+Un ejemplo de un ejercicio con JOIN:
+```sql
+SELECT goal.player
+FROM game JOIN goal ON game.id = goal.matchid
+WHERE teamid='GER';
+```
+- En esta consulta se unen las tablas **game** y **goal**, de forma que coincidirán en las columnas del ID del partido. 
+- Para diferenciar a que tabla pertenece cada columna las definiremos con el formato *table.column*
+- En el ON se pueden incluir predicados
+
+### Otros tipos de JOIN
+
 
 
 

@@ -1,4 +1,30 @@
 # 📖 SQL y Sublenguajes SQL 📖
+
+
+## Índice
+[SQL y Sublenguajes](#sql-y-sublenguajes-sql)
+[DQL](#dql)
+[El SELECT](#comando-select)
+[WHERE y sus atributos](#where-y-sus-atributos)
+[ORDER BY](#order-by)
+[COUNT, SUM y AVG](#count-sum-y-avg)
+[GROUP BY](#group-by)
+[HAVING](#having)
+[Subconsultas](#subconsultas)
+[JOIN](#join)
+[LEFT JOIN y RIGHT JOIN](#otros-tipos-de-join)
+
+
+
+
+
+
+
+
+
+
+
+# 📖 SQL y Sublenguajes SQL 📖
 __SQL__ (Structured Query Language) es un lenguaje declarativo utilizado en programación, diseñado para administrar, y recuperar información de sistemas de gestión de bases de datos relacionales.
 
 Existen 6 tipos de sublenguajes SQL:
@@ -10,8 +36,8 @@ Existen 6 tipos de sublenguajes SQL:
 - SCL (Session Control Language) → ALTER SESSION, SET ROLL
 
 ---
-# DQL y el SELECT
-Las consultas con el SELECT siguen la siguiente syntax:
+# DQL
+Las consultas en DQL siguen la siguiente syntax:
 ```sql
 SELECT column_list 
 FROM table-name

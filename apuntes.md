@@ -107,13 +107,17 @@ AND NOT (population>250000000 and area>3000000);
 
 Existen funciones como **LENGTH** que sirven para registrar el número de caracteres de una cadena para operar con ello, o **LEFT** que sirve para coger los primeros caracteres de una cadena con el formato
 ```sql
-LEFT(name, 1)
-```
-```sql
 LENGTH(name)
 ```
+```sql
+LEFT(name, 1)
+```
 
+* 
 
+### ORDER BY 
+
+Para ordenar los resultados de nuestra consulta podemos ordenarlos según la columna que nosotros le digamos
 
 
 

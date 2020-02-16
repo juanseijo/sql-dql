@@ -113,7 +113,7 @@ LENGTH(name)
 LEFT(name, 1)
 ```
 
-* 
+---
 
 ### ORDER BY 
 

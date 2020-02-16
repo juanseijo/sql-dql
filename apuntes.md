@@ -22,7 +22,8 @@ FROM table-name
 ```
 El código de la consulta debe acabar con un punto y coma ( ; )
 Podemos usar operadores para unir clausulas (AND, OR)
- 
+  
+
 # Contenido básico 
 El comando SELECT lo utilizamos para filtrar las columnas que queremos sacar en la consulta y el FROM para elegir la tabla de donde queremos sacar los datos.
 ```sql
@@ -31,7 +32,8 @@ FROM world;
 ```
 Con una consulta como esta, obtendríamos la columna 'population' de la tabla 'world'
  
- 
+  
+
 ## WHERE y sus atributos
 Para filtrar los resultados por tuplas usaremos el comando WHERE
 ```sql
@@ -56,7 +58,7 @@ SELECT name
 FROM world
 WHERE population > 200000000;
 ```
-También existe LIKE que compara valores con el uso de comodines. Los comodines se utilizan para sustituir caracteres sin definirlos, existen los siguientes
+También existe **LIKE** que compara valores con el uso de comodines. Los comodines se utilizan para sustituir caracteres sin definirlos, existen los siguientes
 - __%__ que sustituye de 0 a más caracteres
 - **\_** que sustituye a un carácter único
 ```sql
@@ -65,6 +67,7 @@ FROM world
 WHERE name LIKE '%United%';
 ```
 Este código filtraría todas las tuplas que contengan la palabra 'United'
+  
 
 Además de los comparadores podemos usar clausulas como el BETWEEN para devolver valores dentro de un rango, para ello jugaremos con el operador AND:
 ```sql
@@ -72,7 +75,8 @@ SELECT name
 FROM world
 WHERE population BETWEEN 200000000 AND 300000000;
 ```
- 
+  
+
 Si queremos filtrar las tuplas de una columna con valores distintos entre si (ya sean cadenas de caracteres o números salteados) podemos utilizar el operador IN, para comparar valores a partir de una lista sin necesidad de usar varias veces el comparador '='
 
 ```sql

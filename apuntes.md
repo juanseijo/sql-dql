@@ -227,10 +227,29 @@ WHERE teamid='GER';
 - Para diferenciar a que tabla pertenece cada columna las definiremos con el formato *table.column*
 - En el ON se pueden incluir predicados
 
+### Art Garfunkel 😨
+ También podemos hacer JOIN de una tabla con ella misma, para ello necesitamos usar el comando alias [AS] con esto podemos operar con la misma tabla sin que haya redundancia de datos al nombrarla, ya que la nombraremos distinto según para que la vayamos a consultar.
+ 
+ Sabiendo esto podremos hacer este ejercicio, el cual nos pide acceder a la tabla 'actores' de dos maneras distintas
+ 
+```sql
+SELECT DISTINCT a2.name
+FROM actor AS a1 JOIN casting AS c1 ON c1.actorid = a1.id
+                 JOIN casting AS c2 ON c1.movieid = c2.movieid
+                 JOIN actor AS a2 ON c2.actorid = a2.id
+WHERE a1.name = 'Art Garfunkel'
+  AND a1.name <> a2.name;
+```
+Además utilizamos el comando DISTINCT que nos sirve para que no nos devuelva datos duplicados.
+
+
 ### Otros tipos de JOIN
-
-
-
+Existen también los LEFT y RIGHT JOIN que se diferencian en que muestran todos los valores del lado que se le indique aunque tengan **nulos** al otro lado.
+```sql
+SELECT teacher.name, COALESCE(dept.name,'None')
+FROM teacher LEFT JOIN dept ON teacher.dept = dept.id;
+```
+También tenemos, como vemos en el ejemplo, la función COALESCE, que sustituye los valores nulos por el valor que le introducimos.
 
 
 

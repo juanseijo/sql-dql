@@ -30,6 +30,7 @@ FROM world;
 ```
 Con una consulta como esta, obtendríamos la columna 'population' de la tabla 'world'
 
+### WHERE y sus atributos
 Para filtrar los resultados por tuplas usaremos el comando WHERE
 ```sql
 SELECT population 
@@ -53,3 +54,6 @@ SELECT name
 FROM world
 WHERE population > 200000000;
 ```
+Además de los comparadores podemos usar clausulas como el BETWEEN
+
+

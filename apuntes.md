@@ -117,7 +117,33 @@ LEFT(name, 1)
 
 ### ORDER BY 
 
-Para ordenar los resultados de nuestra consulta podemos ordenarlos según la columna que nosotros le digamos
+Para ordenar los resultados de nuestra consulta podemos ordenarlos según la columna que nosotros le digamos con un **ORDER BY**. Se coloca después del WHERE con la siguiente syntax
+```sql
+SELECT column_name
+FROM table_name
+WHERE condition
+ORDER BY column_name
+```
+Por defecto el orden será ascendente pero puede especificarse usando **ASC** o **DESC**
+```sql
+SELECT company_name, city
+FROM dept
+ORDER BY company_name DESC
+```
+---
+
+### COUNT, SUM y AVG
+COUNT, SUM y AVG son funciones que agregan valores según los datos que reciben
+- **COUNT**: devuelve un número resultado de contar los valores introducidos
+- **SUM**: devuelve la suma de los valores introducidos
+- **AVG**: devuelve la media de los valores introducidos
+
+La syntax sería así:
+```sql
+SELECT [COUNT|SUM|AVG](column_name)
+FROM table_name
+```
+
 
 
 

@@ -314,7 +314,7 @@ Con ALTER modificamos la estructura de una tabla, añadiendo o eliminando column
 ```sql
 ALTER TABLE <nome_da_taboa>
 
-	columnas		|		restriccion
+	columnas	|		restriccion
 	/	\				/	\
 engadir	     eliminar		 engadir	    eliminar
 ADD		DROP			ADD		DROP

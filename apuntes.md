@@ -316,7 +316,7 @@ ALTER TABLE <nome_da_taboa>
 
 	columnas		|		restriccion
 	/	\				/	\
-engadir	eliminar		engadir	eliminar
+engadir	     eliminar		 engadir	    eliminar
 ADD		DROP			ADD		DROP
 
 ADD [COLUMN] <atributo1> <dominio1> [NOT NULL] [DEFAULT <x>]

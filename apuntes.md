@@ -316,7 +316,7 @@ ALTER TABLE <nome_da_taboa>
 
 	columnas	|		restriccion
 	/	\			/	\
-engadir	     eliminar		 engadir	    eliminar
+engadir	     eliminar		 engadir	 eliminar
 ADD		DROP		ADD		DROP
 
 ADD [COLUMN] <atributo1> <dominio1> [NOT NULL] [DEFAULT <x>]
@@ -326,12 +326,91 @@ DROP [CONSTRAINT <nome>] …
 
 ```
 
+## DROP
+Con DROP podemos eliminar bases de datos o tablas
+```sql
+DROP SCHEMA
+[IF EXISTS] <database_name>
+[CASCADE|RESTRICT];
+```
+```sql
+DROP TABLE
+[IF EXISTS] <table_name>
+[CASCADE|RESTRICT];
+```
+Es importante especificar el CASCADE o RESTRICT
+
+- CASCADE elimina sin importar si hay o no contenido de datos
+- RESTRICT protege de ser eliminado si hay datos
+
 ## Restricciones
 
 Existen bastantes tipos de restricciones, que se indican de varias formas:
+
+### PRIMARY KEY
+Define la clave primaria de la tabla (puede ponerse como una restricción separada o en la misma línea en la declaración del atributo)
+```sql
+[CONSTRAINT <restriction_name>]
+PRIMARY KEY (<atributo>);
+```
+### FOREIGN KEY
+Define la clave foránea y la tabla y atributo al que referencia.
+```sql
+CONSTRAINT <reference_name> FOREIGN KEY (b1, b2) REFERENCES <table_name> (c1, c2)
+);
+```
+Existen varias propiedades que se le pueden añadir a la FOREIGN KEY: 
+- ON (DELETE) determina que hacer por defecto en un DELETE
+- NO ACTION (opción por defecto) los datos no se modifican entre tablas
+- SET NULL establece NULL 
+- SET DEFAULT toma los valores por defecto
 
 ### NOT NULL
 Evita que un dato sea nulo
 
 ### UNIQUE
 Protege la duplicación de datos
+
+### CHECK
+Limita los valores en una tabla
+
+ejemplo:
+```sql
+CONSTRAINT check_soldo
+CHECK soldo >= (
+		SELECT soldo
+		FROM empregado
+		WHERE dept=’A’
+);
+```
+
+---
+
+# DML
+Sublenguaje sql que utilizamos para introducir o modificar datos en una base de datos o en las tablas.
+
+## INSERT 
+Inserta valores en una base de datos
+```sql
+INSERT INTO <table_name>
+[(<atribute1>,<atribute2>,...)]
+VALUES 
+      (<value1A>,value2A,...),
+      (<value1B>,<value2B>,...);
+```
+
+## DELETE
+Elimina datos dentro de una tabla
+```sql
+DELETE FROM <table_name>
+[WHERE <predicado>];
+```
+
+## UPDATE
+Modifica los valores de los registros
+```sql
+UPDATE <table_name>
+SET <atribute1> = <value1>
+    <atribute2> = <value2>
+[WHERE <predicado>];
+```

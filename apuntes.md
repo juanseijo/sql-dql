@@ -13,6 +13,17 @@
 - [Subconsultas](#subconsultas)
 - [JOIN](#join)
 - [LEFT JOIN y RIGHT JOIN](#otros-tipos-de-join)
+- -
+- [DDL](#ddl)
+- [CREATE](#create)
+- [ALTER](#alter)
+- [DROP](#drop)
+- [Restricciones](#restricciones)
+- -
+- [DML](#dml)
+- [INSERT](#insert)
+- [DELETE](#delete)
+- [UPDATE](#update)
 
 
 

@@ -280,5 +280,58 @@ FROM teacher LEFT JOIN dept ON teacher.dept = dept.id;
 También tenemos, como vemos en el ejemplo, la función COALESCE, que sustituye los valores nulos por el valor que le introducimos.
 
 
+---
+# DDL
+Las consultas en DDL sirven para organizar las estructuras de las bases de datos
 
+## CREATE
+```sql
+CREATE DATABASE <name>
+	[IF NOT EXIST] <nameDB>
+    [CHARACTER SET <CharsetName>];
+```
+```sql
+CREATE SCHEMA <name>;
+```
+```sql
+CREATE TABLE <table_name> (
+		<atributo1> <dominio1>,
+		<atributo2> <dominio2> [NOT NULL] [(*)] [DEFAULT <x>],
+		…
+		<atributoN> <dominioN>
+		[CONSTRAINT <restriction_name> PRIMARY KEY (<atributos>)],
+		[CONSTRAINT <restriction_name> FOREIGN KEY (<atributos>)],
+		[CONSTRAINT <restriction_name> UNIQUE (<atributos>)],
+		...
+);
 
+```
+Podemos crear tablas, bases de datos, o esquemas.
+
+## ALTER
+Con ALTER modificamos la estructura de una tabla, añadiendo o eliminando columnas.
+
+```sql
+ALTER TABLE <nome_da_taboa>
+
+	columnas		|		restriccion
+     /	\		        	 /	   \
+engadir	eliminar		engadir  eliminar
+ADD		DROP			ADD		    DROP
+
+ADD [COLUMN] <atributo1> <dominio1> [NOT NULL] [DEFAULT <x>]
+DROP [COLUMN] <atributo1> [CASCADE | RESTRICT]
+ADD [CONSTRAINT <nome>] ...
+DROP [CONSTRAINT <nome>] …
+
+```
+
+## Restricciones
+
+Existen bastantes tipos de restricciones, que se indican de varias formas:
+
+### NOT NULL
+Evita que un dato sea nulo
+
+### UNIQUE
+Protege la duplicación de datos

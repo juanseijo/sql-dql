@@ -18,11 +18,13 @@ Instalación correcta y funcionamiento del MariaDB correcto
 
 ![](images/Screenshot_6.png)
 
-Creamos la base de datos escribiendo el nombre que le vamos a dar y una vez creada la elegimos con ```use``` para trabajar en ella
+Creamos la base de datos escribiendo el nombre que le vamos a dar y una vez creada la elegimos con ```use``` para trabajar en ella. Para ver todas las bases de datos creadas en una simulación de interfaz gráfica usamos ```show databases```.
+
 
 ![](images/Screenshot_7.png)
 
 Una vez creada la base de datos, crearemos las tablas en ella, introduciendo el nombre de las tablas y los atributos de la misma. Para comprobar que todo esta correcto usaremos el comando ```describe```seguido del nombre de la tabla que queremos comprobar.
+
 ![](images/Screenshot_8.png)
 
 Seguimos creando las tablas restantes. 
@@ -72,7 +74,6 @@ Creamos todas las tablas de la base de datos
 ![](images/Screenshot_22.png)
 
 ![](images/Screenshot_23.png)
-
 
 
 

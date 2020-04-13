@@ -14,6 +14,9 @@ Modificamos las variables de entorno del sistema y le añadimos la ruta de la ca
 Instalación correcta y funcionamiento del MariaDB correcto
 
 
+--- 
+
+
 # Creación Proxectos_De_Investigación
 
 ![](images/Screenshot_6.png)
